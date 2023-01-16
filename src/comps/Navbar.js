@@ -5,7 +5,7 @@ import App1 from './App1'
 export default function Navbar() {
     return (
         <>
-            <nav className='text-white'>
+            <nav>
                 <Link to="/home">Home</Link>
                 <Link to="/about">About</Link>
                 <Link to="/contact">Contact</Link>

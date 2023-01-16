@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App1 from "./comps/App1";
 import App2 from "./comps/App2";
-
 // import App from "./components/App";
 
 
