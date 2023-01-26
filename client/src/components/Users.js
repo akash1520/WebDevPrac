@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useState,useEffect } from 'react'
 
 export default function Users() {
 
-    const [backendData, setBackendData] = useState([{}])
+    const [backendData,setBackendData]=useState([])
 
     useEffect(() => {
         fetch("/api").then(
-            response => response.json()
+            Response=>Response.json()
         ).then(
-            data => {setBackendData(data)}
-        )
-    }, [])
-
-    return (
-        <div>
-
-            {(typeof backendData.users === 'undefined') ? (
-                <p>Loading....</p>
-            ) : (
-                backendData.users.map((user, i) => {
-                    <p key={i}>{user}</p>
-                })
-            )
+            (data)=>{
+                setBackendData(data);
             }
+        )
+      }
+    , [])
+    
 
-        </div>
-    )
+  return (
+    <div>
+        {
+            <p>{backendData.Users.map(function(user,id){
+                return (<p style={{"marginLeft":'1rem'}} key={id}>{user}</p>)
+            })}</p>
+            }
+        
+    </div>
+  )
 }
