@@ -13,8 +13,13 @@ const icecreamSlice= createSlice({
         },
         restocked:(state,action)=>{
             state.numOfIcecreams+=action.payload
-        }
-    }
+        },
+    },
+    extraReducers:{
+        ['cake/ordered']:(state)=>{
+            state.numOfIcecreams--;
+        },
+    },
 })
 
 module.exports = icecreamSlice.reducer
